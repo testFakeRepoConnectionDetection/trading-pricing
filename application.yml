@@ -1,0 +1,9 @@
+app:
+  name: Portail client
+  integrations:
+    api-gateway:
+      base-url: https://api-gateway.internal
+      target-application: API Gateway
+    customers:
+      base-url: https://base-clients.internal/api/v1
+      target-application: Base clients
