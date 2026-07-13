@@ -1,9 +1,17 @@
 app:
   name: Portail client
+  flow-enrichment:
+    data-category-field: data_category
   integrations:
     api-gateway:
       base-url: https://api-gateway.internal
       target-application: API Gateway
+      data-category: ORDER_SUBMISSION
+      payload-format: JSON
+      payload-type: fixture.dto.OrderSubmissionDto
     customers:
       base-url: https://base-clients.internal/api/v1
       target-application: Base clients
+      data-category: CUSTOMER_PROFILE
+      payload-format: JSON
+      payload-type: fixture.dto.CustomerProfileDto
