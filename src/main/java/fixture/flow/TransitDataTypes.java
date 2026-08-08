@@ -7,6 +7,7 @@ package fixture.flow;
 public final class TransitDataTypes {
 
   public static final String DATA_CATEGORY_GATEWAY = "ORDER_SUBMISSION";
+  public static final String DATA_CATEGORY_COMMANDES = "DIRECT_ORDER_CREATE";
   public static final String DATA_CATEGORY_CUSTOMERS = "CUSTOMER_PROFILE";
 
   public static final String PAYLOAD_FORMAT = "JSON";

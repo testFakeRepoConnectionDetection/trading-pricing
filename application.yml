@@ -9,6 +9,12 @@ app:
       data-category: ORDER_SUBMISSION
       payload-format: JSON
       payload-type: fixture.dto.OrderSubmissionDto
+    service-commandes:
+      base-url: https://service-commandes.internal/api/v1/orders
+      target-application: Service commandes
+      data-category: DIRECT_ORDER_CREATE
+      payload-format: JSON
+      payload-type: fixture.dto.DirectOrderCreateDto
     customers:
       base-url: https://base-clients.internal/api/v1
       target-application: Base clients
