@@ -1,23 +1,17 @@
 app:
-  name: Portail client
+  name: Trading/Pricing
   flow-enrichment:
     data-category-field: data_category
   integrations:
-    api-gateway:
-      base-url: https://api-gateway.internal
-      target-application: API Gateway
-      data-category: ORDER_SUBMISSION
+    datahub:
+      base-url: https://datahub.internal/api/v1/market-data
+      target-application: DataHub
+      data-category: MARKET_DATA
       payload-format: JSON
-      payload-type: fixture.dto.OrderSubmissionDto
-    service-commandes:
-      base-url: https://service-commandes.internal/api/v1/orders
-      target-application: Service commandes
-      data-category: DIRECT_ORDER_CREATE
+      payload-type: fixture.dto.MarketDataRequestDto
+    booking:
+      base-url: https://booking.internal/api/v1/trades
+      target-application: Booking
+      data-category: TRADE_CAPTURE
       payload-format: JSON
-      payload-type: fixture.dto.DirectOrderCreateDto
-    customers:
-      base-url: https://base-clients.internal/api/v1
-      target-application: Base clients
-      data-category: CUSTOMER_PROFILE
-      payload-format: JSON
-      payload-type: fixture.dto.CustomerProfileDto
+      payload-type: fixture.dto.TradeCaptureDto
