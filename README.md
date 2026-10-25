@@ -1,5 +1,7 @@
 # Trading/Pricing (fixture)
 
+Business function: `FRONT_OFFICE` (`app.business_function`).
+
 Trader front and pricing model.
 
 ## Integrations (topology)
