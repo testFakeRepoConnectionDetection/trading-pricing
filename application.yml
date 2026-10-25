@@ -3,15 +3,22 @@ app:
   flow-enrichment:
     data-category-field: data_category
   integrations:
-    datahub:
-      base-url: https://datahub.internal/api/v1/market-data
-      target-application: DataHub
-      data-category: MARKET_DATA
+    analytics:
+      base-url: https://analytics.internal/api/v1/priced-trades
+      target-application: Analytics
+      data-category: PRICED_TRADE
       payload-format: JSON
-      payload-type: fixture.dto.MarketDataRequestDto
+      payload-type: fixture.dto.PricedTradeDto
     booking:
       base-url: https://booking.internal/api/v1/trades
       target-application: Booking
       data-category: TRADE_CAPTURE
       payload-format: JSON
       payload-type: fixture.dto.TradeCaptureDto
+  api:
+    risk-results:
+      path: /api/v1/risk-results
+      data-category: RISK_RESULT
+      called-by-application: Analytics
+  callers:
+    - Analytics

@@ -1,12 +1,13 @@
 package fixture.flow;
 
 /**
- * Business data categories transiting on outbound integrations from Trading/Pricing.
+ * Business data categories on Trading/Pricing integrations.
  * Used by connection-discovery Data Model enrichment (grep: data_category).
  */
 public final class TransitDataTypes {
 
-  public static final String DATA_CATEGORY_MARKET_DATA = "MARKET_DATA";
+  public static final String DATA_CATEGORY_PRICED_TRADE = "PRICED_TRADE";
+  public static final String DATA_CATEGORY_RISK_RESULT = "RISK_RESULT";
   public static final String DATA_CATEGORY_TRADE_CAPTURE = "TRADE_CAPTURE";
 
   public static final String PAYLOAD_FORMAT = "JSON";
