@@ -3,24 +3,29 @@ app:
   business_function: FRONT_OFFICE
   pillar: "Trading & Analytics"
   flow-enrichment:
-    data-category-field: data_category
+    data-field: data
+    frequency-field: frequency
   integrations:
     analytics:
-      base-url: https://analytics.internal/api/v1/priced-trades
+      base-url: https://analytics.internal/api/v1/trades
       target-application: Analytics
-      data-category: PRICED_TRADE
-      payload-format: JSON
-      payload-type: fixture.dto.PricedTradeDto
+      connection-kind: API
+      channel: /api/v1/trades
+      data: trade
+      frequency: real-time
     booking:
       base-url: https://booking.internal/api/v1/trades
       target-application: Booking
-      data-category: TRADE_CAPTURE
-      payload-format: JSON
-      payload-type: fixture.dto.TradeCaptureDto
+      connection-kind: API
+      channel: /api/v1/trades
+      data: trade
+      frequency: real-time
   api:
-    risk-results:
-      path: /api/v1/risk-results
-      data-category: RISK_RESULT
+    prices:
+      path: /api/v1/prices
       called-by-application: Analytics
+      connection-kind: API
+      data: price
+      frequency: real-time
   callers:
     - Analytics

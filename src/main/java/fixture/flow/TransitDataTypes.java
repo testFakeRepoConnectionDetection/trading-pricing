@@ -1,8 +1,8 @@
 package fixture.flow;
 
 /**
- * Business data categories on Trading/Pricing integrations.
- * Used by connection-discovery Data Model enrichment (grep: data_category).
+ * Edge attributes on Trading/Pricing flows.
+ * grep: data frequency trade price real-time
  */
 public final class TransitDataTypes {
 
@@ -12,11 +12,9 @@ public final class TransitDataTypes {
   /** Node attribute pillar for Trading/Pricing. */
   public static final String PILLAR = "Trading & Analytics";
 
-  public static final String DATA_CATEGORY_PRICED_TRADE = "PRICED_TRADE";
-  public static final String DATA_CATEGORY_RISK_RESULT = "RISK_RESULT";
-  public static final String DATA_CATEGORY_TRADE_CAPTURE = "TRADE_CAPTURE";
-
-  public static final String PAYLOAD_FORMAT = "JSON";
+  public static final String DATA_TRADE = "trade";
+  public static final String DATA_PRICE = "price";
+  public static final String FREQUENCY_REAL_TIME = "real-time";
 
   private TransitDataTypes() {}
 }
