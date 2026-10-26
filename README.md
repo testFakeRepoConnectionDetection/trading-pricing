@@ -1,6 +1,7 @@
 # Trading/Pricing (fixture)
 
 Business function: `FRONT_OFFICE` (`app.business_function`).
+Pillar: `Trading & Analytics` (`app.pillar`).
 
 Trader front and pricing model.
 
