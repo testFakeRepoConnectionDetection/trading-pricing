@@ -2,7 +2,7 @@ package fixture.flow;
 
 /**
  * Edge attributes on Trading/Pricing flows.
- * grep: data frequency trade price real-time
+ * grep: data frequency trade price real-time DataHub
  */
 public final class TransitDataTypes {
 
