@@ -9,6 +9,7 @@ Trader front and pricing model.
 
 - Sends the trade to **Analytics** over HTTP (`/api/v1/trades`).
 - Receives the price back from **Analytics** on `/api/v1/prices`.
+- Receives the real-time price from **DataHub** on `/api/v1/prices`.
 - Sends the trade to **Booking** over HTTP (`/api/v1/trades`).
 
 ## Data transiting on flows (Data Model fixture)
@@ -17,6 +18,7 @@ Trader front and pricing model.
 |------|-----------|------|---------|------|-----------|
 | Analytics | outbound | API | /api/v1/trades | `trade` | `real-time` |
 | Analytics | inbound | API | /api/v1/prices | `price` | `real-time` |
+| DataHub | inbound | API | /api/v1/prices | `price` | `real-time` |
 | Booking | outbound | API | /api/v1/trades | `trade` | `real-time` |
 
 See `TransitDataTypes.java` and `application.yml` (`data`, `frequency`).

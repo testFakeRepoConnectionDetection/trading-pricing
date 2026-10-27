@@ -27,5 +27,12 @@ app:
       connection-kind: API
       data: price
       frequency: real-time
+    datahub-prices:
+      path: /api/v1/prices
+      called-by-application: DataHub
+      connection-kind: API
+      data: price
+      frequency: real-time
   callers:
     - Analytics
+    - DataHub
